@@ -5,7 +5,7 @@ module.exports = async(bot, msg, args) => {
         const embed = new Discord.RichEmbed()
             .setAuthor(`${bot.user.username}`, bot.user.avatarURL)
             .setTitle(`About`)
-            .setDescription(`${bot.user.username} by ${config.creator}. With help from contributors :dizzy:   [Support Server](https://discord.io/ttgprotect)`)
+            .setDescription(`${bot.user.username} by ${config.creator}. With help from contributors :dizzy:   [Support Server](https://discord.gg/MNQ5xd7)`)
             .addField(`Version`, `${config.version}`, true)
             .addField(`Branch`, `${config.branch}`, true)
             .addField(`Prefix`, `${config.prefix}`, true)
