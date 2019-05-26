@@ -43,4 +43,5 @@ dnd - user is in Do Not Disturb
     else{
         return msg.channel.send("I could not set my status please type one of the following status: idle, online, invisible, dnd (do not disturb)");
     }
+});
 
