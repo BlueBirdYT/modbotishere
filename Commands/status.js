@@ -7,7 +7,7 @@ idle - user is AFK
 offline - user is offline or invisible
 dnd - user is in Do Not Disturb
 */
-    const setStatus = msg.content.split(' ');
+    let setStatus = msg.content.split(' ');
 
    if(msg.author.id !== '455322915471097857'){ 
      return 
@@ -44,4 +44,3 @@ dnd - user is in Do Not Disturb
         return msg.channel.send("I could not set my status please type one of the following status: idle, online, invisible, dnd (do not disturb)");
     }
 
-}
