@@ -24,8 +24,8 @@ module.exports = async(bot, msg, args) => {
   .setFooter(`Contact a developer if you belive this is a mistake and the argument was entered`)
   // ========================== END OF EMBEDS SECTION ==============================
 
-  if(!message.member.hasPermission('ban')) return msg.channel.send(noPerms);
-  if(!message.member.hasPermission('ADMINISTRATOR')) return msg.channel.send(noPerms);
+  if(!msg.member.hasPermission('ban')) return msg.channel.send(noPerms);
+  if(!msg.member.hasPermission('ADMINISTRATOR')) return msg.channel.send(noPerms);
 
 
 
