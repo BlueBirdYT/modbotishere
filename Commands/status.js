@@ -14,6 +14,7 @@ dnd - user is in Do Not Disturb
    }
    if(msg.author.id !== '559642661330485304'){
 	   return
+   }
 
     else if(setStatus[1] === 'idle'){
         bot.user.setStatus("idle")
