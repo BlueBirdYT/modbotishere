@@ -42,7 +42,6 @@ module.exports = async(bot, msg, args) => {
         
         msg.author.send(embed)
         msg.channel.send(`:mailbox: ${msg.author.username}, Check your DM's`);
- }
     } else {
         const embed = new Discord.RichEmbed()
         .setAuthor(bot.user.username, bot.user.avatarURL)
