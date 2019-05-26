@@ -16,7 +16,7 @@ module.exports = async(bot, msg, args) => {
         .addField(`kick`, `Kick the mentioned user`, false)
         .addField(`ban`, `Ban the mentioned user`, false)
         .addField(`embed`, `Make an embed to get yourself heard`)
-        .setFooter(`Made with <2 pby the dev's`)
+        .setFooter(`Made with <2 by the dev's`)
         .setColor(0x157f87)
         msg.author.send(embed)
         msg.channel.send(`:mailbox: ${msg.author.username}, Check your DM's`);
