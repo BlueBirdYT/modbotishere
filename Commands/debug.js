@@ -5,9 +5,9 @@ module.exports = async(bot, msg, args) => {
     msg.channel.send(`Please Wait...`).then(function(m) {
         m.edit(`**Ping Time:** ${m.createdTimestamp - msg.createdTimestamp}ms
         **Commands Loaded:** 15/15 (None Missing)
-        **OS:** Windows Server 2008 R2
-        **RAM:** 4GB
-        **Web Dashboard:** Offline
+        **Bot library: Discord.js** 
+        **Bot mode: Online 24/7 Hours** 
+        **Web Dashboard:** Online
         `)
     })
 }
