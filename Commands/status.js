@@ -18,5 +18,5 @@ bot.user.setActivity(stat, {
   type: type
 });
 bot.user.setStatus(`${status}`);
-msg.channel.send(`Presence has been set to ${type} ${stat}`);
+msg.channel.send(`Presence has been set to ${type} ${stat}`)
 }
