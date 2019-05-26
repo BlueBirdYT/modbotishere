@@ -24,9 +24,10 @@ module.exports = async(bot, msg, args) => {
     .setColor(0xff0000)
     .setFooter(`Contact a developer if you belive this is a mistake and the argument was entered`)
   // ========================== END OF EMBEDS SECTION ==============================
+  if(!msg.member.hasPermission('kick')) return msg.channel.send(noPerms);
+  if(!msg.member.hasPermission('ADMINISTRATOR')) return msg.channel.send(noPerms);
 
-  if(!msg.member.roles.some(r=>["Staff"].includes(r.name)) ) return msg.channel.send(noPerms);
-
+  
   if (msg.mentions.users.size < 1) return msg.channel.send(missingArgument_User).catch(err => {
     const error = new Discord.RichEmbed()
       .setAuthor(bot.user.username, bot.user.avatarURL)
