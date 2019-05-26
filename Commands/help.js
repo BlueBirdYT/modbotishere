@@ -20,4 +20,4 @@ module.exports = async(bot, msg, args) => {
         .setColor(0x157f87)
         msg.author.send(embed)
         msg.channel.send(`:mailbox: ${msg.author.username}, Check your DM's`);
- 
+}
