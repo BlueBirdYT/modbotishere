@@ -19,6 +19,9 @@ module.exports = async(bot, msg, args) => {
         .addField(`embed`, `Make an embed to get yourself heard`)
         .setFooter(`You are viewing all commands`)
         .setColor(0x157f87)
+        msg.author.send(embed)
+        msg.channel.send(`:mailbox: ${msg.author.username}, Check your DM's`);
+    }
  if(!msg.member.hasPermission('View_Audit_log')) {
         const embed = new Discord.RichEmbed()
         .setAuthor(bot.user.username, bot.user.avatarURL)
@@ -38,7 +41,8 @@ module.exports = async(bot, msg, args) => {
         .setColor(0x157f87)
         
         msg.author.send(embed)
-        msg.channel.send(`:mailbox: ${msg.author.username}, Check your DM's`)        
+        msg.channel.send(`:mailbox: ${msg.author.username}, Check your DM's`);
+ }
     } else {
         const embed = new Discord.RichEmbed()
         .setAuthor(bot.user.username, bot.user.avatarURL)
