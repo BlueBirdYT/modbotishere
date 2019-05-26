@@ -1,47 +1,22 @@
-const Discord = require('discord.js');
+<const Discord = require("discord.js");
 
-exports.run = (bot, msg, args) => {
-  /*
-online - user is online
-idle - user is AFK
-offline - user is offline or invisible
-dnd - user is in Do Not Disturb
-*/
-    let setStatus = msg.content.split(' ');
+exports.run = async (bot, message, args) => {
 
-   if(msg.author.id !== '455322915471097857'){ 
-     return 
-   }
-   if(msg.author.id !== '559642661330485304'){
-	   return
-   }
-
-    else if(setStatus[1] === 'idle'){
-        bot.user.setStatus("idle")
-            .then(msg.channel.send("My status has been set to: "+setStatus[1]))
-            .catch(console.error);
-    } 
-
-    else if(setStatus[1] === 'online'){
-        bot.user.setStatus('online')
-            .then(msg.channel.send("My status has been set to: "+ setStatus[1]))
-            .catch(console.error);
-    }
-
-    else if(setStatus[1] === 'invisible'){
-        bot.user.setStatus('offline')
-            .then(msg.channel.send("My status has been set to: "+ setStatus[1]))
-            .catch(console.error);
-    }
-
-    else if(setStatus[1] === 'dnd'){
-        bot.user.setStatus('dnd')
-            .then(msg.channel.send("My status has been set to: "+ setStatus[1] + "(do not disturb)"))
-            .catch(console.error);
-    }
-
-    else{
-        return msg.channel.send("I could not set my status please type one of the following status: idle, online, invisible, dnd (do not disturb)");
-    }
+/*  const list = {
+    play: "PLAYING", 
+    stream: "STREAMING", 
+    listen: "LISTENING", 
+    watch: "WATCHING"
+  }; */
+let stat = args.slice(2).join(" ");
+if(!stat) return message.channel.send("Usage: ?status <playing, listening, streaming, watching> <what are you playing or listening or watching or streaming>");
+let type = args[1];
+if(!type) return message.channel.send("Usage: ?status <playing, listening, streaming, watching> <what are you playing or listening or watching or streaming>");
+let status = args[0];
+if(!status) return message.channel.send("What do you want your bot to be");
+bot.user.setActivity(stat, {
+  type: type
 });
-
+bot.user.setStatus(`${status}`);
+message.channel.send(`Presence has been set to ${type} ${stat}`);
+}
