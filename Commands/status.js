@@ -9,11 +9,11 @@ module.exports = async(bot, msg, args) => {
     listen: "LISTENING", 
     watch: "WATCHING"
   }; */
-if(!config.maintainers.includes(msg.author.id)) return; msg.channel.send("this command is available to the dev's only sorry!");
+if(!config.maintainers.includes(msg.author.id)) return msg.channel.send("this command is available to the dev's only sorry!");
 let stat = args.slice(2).join(" ");
-if(!stat) return msg.channel.send("Usage: $status <playing, listening, streaming, watching> <what are you playing or listening or watching or streaming>");
+if(!stat) return msg.channel.send("Usage: $status <online , dnd , idle , offline> <playing, listening, streaming, watching> <what are you playing or listening or watching or streaming>");
 let type = args[1];
-if(!type) return msg.channel.send("Usage: $status <playing, listening, streaming, watching> <what are you playing or listening or watching or streaming>");
+if(!type) return msg.channel.send("Usage: $status <online , dnd , idle , offline> <playing, listening, streaming, watching> <what are you playing or listening or watching or streaming>");
 let status = args[0];
 if(!status) return msg.channel.send("What do you want your bot to be");
 bot.user.setActivity(stat, {
