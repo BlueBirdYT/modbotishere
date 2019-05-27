@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-exports.run = async (bot,  msg, args) => {
+module.exports = async(bot, msg, args) => {
 
 /*  const list = {
     play: "PLAYING", 
