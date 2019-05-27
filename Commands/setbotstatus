@@ -24,7 +24,7 @@ dnd - user is in Do Not Disturb
     }
 
     else if(setStatus[1] === 'invisible'){
-        bot.user.setStatus('offline')
+        bot.user.setStatus('invisible')
             .then(msg.channel.send("My status has been set to: "+ setStatus[1]))
             .catch(console.error);
     }
