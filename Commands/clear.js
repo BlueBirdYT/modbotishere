@@ -10,4 +10,8 @@ if(!msg.guild.me.hasPermission("MANAGE_MESSAGES")) return msg.channel.send(':x: 
   if(args[0] > 1000) return msg.reply("Sorry can\'t delete that many msges");
   msg.channel.bulkDelete(args[0]).then(() => {
   msg.channel.send(`Clear ${args[0]} messages.`).then(msg => msg.delete(2000));
-  }
+});
+
+}   
+                                       
+                                      
