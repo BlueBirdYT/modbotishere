@@ -12,6 +12,7 @@ module.exports = async(bot, msg, args) => {
         .addField(`debug`, `Info about the Host and the bot`, false)
         .addField(`uptime`, `How long has the bot been up?`, false)
         .addField(`profile`, `About your user profile`, false)
+        .addField(`mod`,`warn , kick , ban , clear , addrole`)
         .addField(`warn`, `Warn someone about something`, false)
         .addField(`kick`, `Kick the mentioned user`, false)
         .addField(`ban`, `Ban the mentioned user`, false)
