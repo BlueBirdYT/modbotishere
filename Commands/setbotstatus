@@ -11,15 +11,15 @@ dnd - user is in Do Not Disturb
     const setStatus = msg.content.split(' ');
     
     if(!config.maintainers.includes(msg.author.id)) return msg.channel.send("this command is available to the dev's only sorry!")
-    }
- 
-
-    else if(setStatus[1] === 'idle'){
+    } 
+     
+     
+     else if(setStatus[1] === 'idle'){
         bot.user.setStatus('idle')
             .then(msg.channel.send("My status has been set to: "+setStatus[1]))
             .catch(console.error);
     } 
-
+    
     else if(setStatus[1] === 'online'){
         bot.user.setStatus('online')
             .then(msg.channel.send("My status has been set to: "+ setStatus[1]))
