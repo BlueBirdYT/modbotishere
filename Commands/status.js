@@ -8,7 +8,7 @@ module.exports = async(bot, msg, args) => {
     listen: "LISTENING", 
     watch: "WATCHING"
   }; */
-if(msg.author.id !== '559642661330485304', '455322915471097857') return;
+if(!config.maintainers.includes(msg.author.id)) return; msg.channel.send("this command is available to the dev's only sorry!");
 let stat = args.slice(2).join(" ");
 if(!stat) return msg.channel.send("Usage: $status <playing, listening, streaming, watching> <what are you playing or listening or watching or streaming>");
 let type = args[1];
