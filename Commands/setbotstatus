@@ -9,11 +9,10 @@ dnd - user is in Do Not Disturb
 */
 
     const setStatus = msg.content.split(' ');
-   if(!config.maintainers.includes(msg.author.id)) return msg.channel.send("this command is available to the dev's only sorry!")
-}
-   if(msg.author.id !== '455322915471097857'){ 
-     return msg.reply(`Only <@455322915471097857> can use this`)
-   }
+    
+    if(!config.maintainers.includes(msg.author.id)) return msg.channel.send("this command is available to the dev's only sorry!")
+    }
+ 
 
     else if(setStatus[1] === 'idle'){
         bot.user.setStatus('idle')
